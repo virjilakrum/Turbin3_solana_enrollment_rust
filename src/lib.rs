@@ -148,6 +148,11 @@ mod tests {
 
     #[test]
     fn complete() {
+        /*
+        Interacts with a custom Solana program called `WbaPrereqProgram` to complete a task.
+        It uses a predefined set of arguments, including a GitHub username (virjilakrum).
+        This function also demonstrates how to derive a program-derived address (PDA) and sign a transaction.
+        */
         let signer =
             read_keypair_file("./wallets/my-wba-wallet.json").expect("Couldn't find wallet file");
         let client = RpcClient::new(DEVNET_RPC_URL);

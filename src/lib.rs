@@ -69,7 +69,7 @@ mod tests {
                     signature
                 );
             }
-            Err(e) => println!("404: {}", e),
+            Err(e) => println!("404 - Follow the white rabbit...: {}", e),
         };
     }
 

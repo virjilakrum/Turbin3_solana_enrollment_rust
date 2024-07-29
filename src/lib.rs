@@ -78,6 +78,7 @@ mod tests {
         let keypair =
             read_keypair_file("./wallets/dev-wallet.json").expect("Couldn't find wallet file");
         let to_pubkey = Pubkey::from_str(MY_WBA_WALLET_ADDRESS).unwrap();
+
         let client = RpcClient::new(DEVNET_RPC_URL);
 
         let recent_blockhash = client
@@ -85,7 +86,9 @@ mod tests {
             .expect("Failed to get recent blockhash");
 
         let ix = transfer(&keypair.pubkey(), &to_pubkey, LAMPORTS_PER_SOL / 10);
-
+        /*
+        Transfers 0.1 SOL (1/10 of a SOL) from the dev-wallet.json wallet to the address specified by MY_WBA_WALLET_ADDRESS.
+        */
         let tx = Transaction::new_signed_with_payer(
             &[ix],
             Some(&keypair.pubkey()),
@@ -108,6 +111,7 @@ mod tests {
             read_keypair_file("./wallets/dev-wallet.json").expect("Couldn't find wallet file");
         let to_pubkey = Pubkey::from_str(MY_WBA_WALLET_ADDRESS).unwrap();
         let client = RpcClient::new(DEVNET_RPC_URL);
+        // Transfers the entire balance from the wallet in dev-wallet.json to MY_WBA_WALLET_ADDRESS, accounting for transaction fees.
 
         let from_balance = client
             .get_balance(&keypair.pubkey())

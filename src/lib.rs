@@ -16,7 +16,7 @@ mod tests {
     use std::str::FromStr;
 
     const DEVNET_RPC_URL: &str = "https://api.devnet.solana.com";
-    const MY_WBA_WALLET_ADDRESS: &str = "HWkiywmVgVmVzg3JtHivLrTrQrrKjMaP7mR8QKk84F7b";
+    const MY_WBA_WALLET_ADDRESS: &str = "EnNSiJSNHDqncJypsmhrGwPh8YfpJP4W4ScxrYAg2oZq";
 
     #[test]
     fn keygen() {

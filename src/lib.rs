@@ -123,7 +123,7 @@ mod tests {
         ]);
 
         let args = CompleteArgs {
-            github: b"osmannyildiz".to_vec(),
+            github: b"virjilakrum".to_vec(),
         };
 
         let recent_blockhash = client

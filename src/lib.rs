@@ -1,6 +1,17 @@
 mod programs;
 
+/*
+Declares a module named programs, which is presumably defined elsewhere in the project.
+This module likely contains the implementation of the WbaPrereqProgram.
+*/
+
 #[cfg(test)]
+
+/*
+Defines a module for unit tests.
+The #[cfg(test)] attribute ensures that this module is only compiled when running tests.
+*/
+
 mod tests {
     use crate::programs::wba_prereq::{CompleteArgs, WbaPrereqProgram};
     use solana_client::rpc_client::RpcClient;

@@ -45,6 +45,10 @@ mod tests {
     // A predefined public key address as a string.
     #[test]
     fn keygen() {
+        /*
+            Generates a new Solana wallet (keypair) and prints the public key and private key (as a byte array) to the console.
+        */
+
         let kp = Keypair::new();
         println!("Generated Sol Wallet with Pub key: {}", kp.pubkey());
         println!("Copy for security:");

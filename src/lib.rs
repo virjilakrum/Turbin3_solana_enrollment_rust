@@ -41,8 +41,8 @@ mod tests {
 
     const DEVNET_RPC_URL: &str = "https://api.devnet.solana.com";
     // URL for the Solana devnet RPC endpoint.
-    const MY_WBA_WALLET_ADDRESS: &str = "HWkiywmVgVmVzg3JtHivLrTrQrrKjMaP7mR8QKk84F7b";
-    // A predefined public key address as a string.
+    const MY_WBA_WALLET_ADDRESS: &str = "HWkiywmVgVmVzg3JtHivLrTrQrrKjMaP7mR8QKk84F7b"; //my wba pubkey address from task-1
+                                                                                        // A predefined public key address as a string.
     #[test]
     fn keygen() {
         /*

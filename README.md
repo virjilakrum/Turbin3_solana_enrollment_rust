@@ -1,5 +1,14 @@
 # Turbin3 Solana Enrollment Rust
 
+/*
+__     ___      _ _ _       _
+\ \   / (_)_ __(_|_) | __ _| | ___ __ _   _ _ __ ___
+ \ \ / /| | '__| | | |/ _` | |/ / '__| | | | '_ ` _ \
+  \ V / | | |  | | | | (_| |   <| |  | |_| | | | | | |
+   \_/  |_|_| _/ |_|_|\__,_|_|\_\_|   \__,_|_| |_| |_|
+             |__/
+ */
+ 
 ### Purpose:
 This project is a Rust program developed to perform various operations on the Solana blockchain. The project allows users to create Solana wallets, receive SOL tokens to their wallets (airdrop), transfer these tokens to other wallets, and interact with certain programs.
 

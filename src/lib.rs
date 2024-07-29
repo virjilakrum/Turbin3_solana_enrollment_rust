@@ -200,6 +200,10 @@ mod tests {
 
     #[test]
     fn byte_array_to_base58() {
+        /*
+        Converts a byte array (read from standard input) into a base58 encoded string.
+        This is useful for converting between different representations of keys.
+         */
         println!("Enter your secret key as byte array:");
         let stdin = io::stdin();
         let wallet = stdin

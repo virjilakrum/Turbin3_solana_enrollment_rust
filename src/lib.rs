@@ -189,6 +189,9 @@ mod tests {
 
     #[test]
     fn base58_to_byte_array() {
+        /*
+        Converts a base58 encoded secret key into a byte array. The base58 key is read from standard input.
+         */
         println!("Enter your secret key as base58:");
         let stdin = io::stdin();
         let base58 = stdin.lock().lines().next().unwrap().unwrap();

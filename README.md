@@ -1,11 +1,11 @@
 # Turbin3 Solana Enrollment Rust
-## Task 2
 
-# Test Commands
+
+## Test Commands
 `cargo test ...`
 
 
-# Transactions and Transaction Links
+## Transactions and Transaction Links
 
 | Test Name | Transaction Description | Transaction Link |
 |------------------------|-------------------------------------|-----------------------------------------------------------------------------------------------------------|

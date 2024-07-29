@@ -112,7 +112,6 @@ mod tests {
         let to_pubkey = Pubkey::from_str(MY_WBA_WALLET_ADDRESS).unwrap();
         let client = RpcClient::new(DEVNET_RPC_URL);
         // Transfers the entire balance from the wallet in dev-wallet.json to MY_WBA_WALLET_ADDRESS, accounting for transaction fees.
-
         let from_balance = client
             .get_balance(&keypair.pubkey())
             .expect("Failed to get balance");
@@ -126,7 +125,7 @@ mod tests {
             Message::new_with_blockhash(&[mock_ix], Some(&keypair.pubkey()), &recent_blockhash);
         let fee = client
             .get_fee_for_message(&message)
-            .expect("Failed to get fee");
+            .expect("Failed to get fee :(");
 
         let ix = transfer(&keypair.pubkey(), &to_pubkey, from_balance - fee);
 
@@ -139,7 +138,7 @@ mod tests {
 
         let signature = client
             .send_and_confirm_transaction(&tx)
-            .expect("Failed to send transaction");
+            .expect("Failed to send tx");
         println!(
             "Success! Check out your TX here: https://explorer.solana.com/tx/{}?cluster=devnet",
             signature
@@ -154,7 +153,7 @@ mod tests {
         This function also demonstrates how to derive a program-derived address (PDA) and sign a transaction.
         */
         let signer =
-            read_keypair_file("./wallets/my-wba-wallet.json").expect("Couldn't find wallet file");
+            read_keypair_file("./wallets/my-wba-wallet.json").expect("Couldn't find wallet");
         let client = RpcClient::new(DEVNET_RPC_URL);
 
         let pda_pubkey = WbaPrereqProgram::derive_program_address(&[

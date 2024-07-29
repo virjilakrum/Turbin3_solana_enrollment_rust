@@ -30,8 +30,15 @@ transfer_all_sol: Sends the entire balance in the wallet to a specific address. 
 
 #### Interact with WbaPrereqProgram (complete):
 Interacts with a special program called WbaPrereqProgram and completes a specific transaction. This function is designed for users who want to perform more advanced program interactions on Solana.
-## Test Commands
+
+## Test Commands 
 `cargo test ...`
+
+## .gitignore
+<img width="293" alt="gitignore" src="https://github.com/user-attachments/assets/0aec2c75-a542-4a44-a192-cab39a848b86">
+
+## File Directory 
+<img width="292" alt="file directory" src="https://github.com/user-attachments/assets/52a8ed8f-50fc-4201-b7b1-efc1fe0fe387">
 
 
 ## Transactions and Transaction Links

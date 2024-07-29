@@ -1,6 +1,26 @@
 # Turbin3 Solana Enrollment Rust
 
+### Purpose:
+This project is a Rust program developed to perform various operations on the Solana blockchain. The project allows users to create Solana wallets, receive SOL tokens to their wallets (airdrop), transfer these tokens to other wallets, and interact with certain programs.
 
+### Main Functions:
+
+#### Wallet Creation (keygen):
+Creates a new Solana wallet and saves the private key of the wallet in the dev-wallet.json file in JSON format. This function allows the user to securely store the private and public key information of their wallet.
+
+Base58 Conversions (byte_array_to_base58, base58_to_byte_array):
+byte_array_to_base58: Converts a private key from a byte array format to base58 format. This conversion is used to securely store and share private keys.
+base58_to_byte_array: Converts a private key in base58 format to a byte array format. This process makes the private key reusable.
+
+#### Airdrop:
+Sends SOL tokens to the user's wallet in a testnet or devnet environment. This provides the initial balance required for the user to be able to perform transactions on the Solana blockchain.
+
+#### SOL Transfers (transfer_sol, transfer_all_sol):
+transfer_sol: Sends a fixed amount of SOL tokens to a specific address. This function allows users to transfer their balances to other accounts.
+transfer_all_sol: Sends the entire balance in the wallet to a specific address. This function allows users to transfer their entire balances to another wallet.
+
+#### Interact with WbaPrereqProgram (complete):
+Interacts with a special program called WbaPrereqProgram and completes a specific transaction. This function is designed for users who want to perform more advanced program interactions on Solana.
 ## Test Commands
 `cargo test ...`
 

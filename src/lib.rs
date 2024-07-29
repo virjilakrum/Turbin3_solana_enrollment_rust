@@ -48,7 +48,6 @@ mod tests {
         /*
             Generates a new Solana wallet (keypair) and prints the public key and private key (as a byte array) to the console.
         */
-
         let kp = Keypair::new();
         println!("Generated Sol Wallet with Pub key: {}", kp.pubkey());
         println!("Copy for security:");
@@ -57,6 +56,9 @@ mod tests {
 
     #[test]
     fn airdrop() {
+        /*
+        Requests an airdrop of 2 SOL to the public key derived from the private key in dev-wallet.json. It uses the Solana devnet.
+        */
         let keypair = read_keypair_file("./wallets/dev-wallet.json")
             .expect("Couldn't find dev-wallet.json file");
         let client = RpcClient::new(DEVNET_RPC_URL);

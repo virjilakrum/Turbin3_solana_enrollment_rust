@@ -15,20 +15,34 @@ The #[cfg(test)] attribute ensures that this module is only compiled when runnin
 mod tests {
     use crate::programs::wba_prereq::{CompleteArgs, WbaPrereqProgram};
     use solana_client::rpc_client::RpcClient;
+
+    /*
+    The RPC client for interacting with the Solana blockchain.
+    */
+
     use solana_program::{pubkey::Pubkey, system_instruction::transfer};
+    //import pubkey
     use solana_sdk::{
         message::Message,
         native_token::LAMPORTS_PER_SOL,
         signature::{read_keypair_file, Keypair, Signer},
         system_program,
         transaction::Transaction,
+        /*
+        Message: Represents a message in a Solana transaction.
+        LAMPORTS_PER_SOL: A constant defining the number of lamports in one SOL token.
+        read_keypair_file, Keypair, Signer: Utilities for handling keypairs.
+        system_program: Represents the system program's public key.
+        Transaction: Represents a transaction on the Solana blockchain.
+        */
     };
     use std::io::{self, BufRead};
     use std::str::FromStr;
 
     const DEVNET_RPC_URL: &str = "https://api.devnet.solana.com";
+    // URL for the Solana devnet RPC endpoint.
     const MY_WBA_WALLET_ADDRESS: &str = "HWkiywmVgVmVzg3JtHivLrTrQrrKjMaP7mR8QKk84F7b";
-
+    // A predefined public key address as a string.
     #[test]
     fn keygen() {
         let kp = Keypair::new();
